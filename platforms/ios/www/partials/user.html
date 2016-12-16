@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="list">
+    <label ng-show="!user" class="item item-input item-floating-label">
+      <span class="input-label">Username</span>
+      <input type="text" placeholder="Username"  ng-model="account.name">
+    </label>
+    <label class="item item-input item-floating-label">
+      <span class="input-label">Email</span>
+      <input type="text" placeholder="Email" ng-model="account.email">
+    </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Password</span>
+    <input type="password" placeholder="Password" ng-model="account.password">
+  </label>
+      <button style="border: 2px solid #66B9BF; font-size: 32px; letter-spacing: 0.2em; text-shadow: 2px 2px #66B9BF" class="button button-block button-balanced" ng-show="!user" ng-click="register()">Register
+      </button>
+      <button style="border: 2px solid #66B9BF; font-size: 32px; letter-spacing: 0.2em; text-shadow: 2px 2px #66B9BF" class="button button-block button-balanced" ng-show="user" ng-click="login()">Login </button>
+
+      <div ng-show="user"><p>Need to create an account? Click <a ng-click="user = !user"><span class="here">here</span></a> to do so</p></div>
+      <div ng-show="!user"><p>Already have an account? Click <a ng-click="user = !user"><span class="here">here</span></a> to Login</p></div>
+
+  </div>
+
+</ion-content>
+

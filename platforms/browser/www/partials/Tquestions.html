@@ -1,0 +1,24 @@
+<ion-content scroll="true">
+    <div id="bind-html-with-trust" class="list card" style="border: 2px solid #66B9BF;">
+
+      <div class="row header">
+         <div class="col text-center"><h3 class="scoreBoard">Score</h3><span class="highScore">{{currentScore}}</span></h3></div>
+         <div class="col text-center"><h3 class="scoreBoard">Best</h3> <span class="highScore">{{highScore}}</span></div>
+         <div class="col text-center"><h3 class="scoreBoard">Timer</h3><timer class="highScore" interval="1000" countdown="22">  {{countdown}}</timer></div>
+         <div class="col text-center"><h3 class="scoreBoard">Noogs</h3><span ng-repeat="strike in strikes track by $index"><span><img ng-src="{{strike}}"></span></span>
+      </div>
+    </div>
+
+        <div class="item item-body">
+          <span class="question">
+           {{Tquestions}}
+          </span>
+        </div>
+      <ul ng-repeat="a in randomize">
+        <li><button class="button button-full button-balanced" style="border: 2px solid #66B9BF; font-size: 24px; line-height: 18px;" id={{correctAnswerId}} ng-click="findCorrect($event); getFactoryTQ()">{{a}}</button></li>
+      </ul>
+
+    </div>
+</ion-content>
+
+

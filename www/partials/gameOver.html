@@ -1,0 +1,19 @@
+
+<ion-content>
+<div class="col text-center">
+<h1 class="title almostBig">Game Over!</h1>
+<h1 class="shadow goUser">Nice job, {{currentUser}}! Your score was {{score}}</h1>
+</div>
+<div class="col text-center">
+<h1 class="shadow topTenTitle underline">Top Ten User High Scores</h1>
+    <ul ng-repeat="user in users |  orderBy : '-highScore' | limitTo: 10">
+     <li class="shadow text-center topTen">{{$index +1}}: {{user.name}} ~ {{user.highScore}}</li>
+    </ul>
+</div>
+<div class="col text-center">
+<a href="#/Tquestions"><img class="play" src="img/repeat-64.png"></a>
+<p class="again">Play again?</p>
+</div>
+</ion-content>
+
+

@@ -1,0 +1,22 @@
+ <ion-content>
+<div class="list card" on-swipe-left="getFacts()" style="border: 2px solid #66B9BF;">
+
+  <div class="item item-avatar">
+    <span class="til">Today I Learned</span>
+  </div>
+
+  <div class="item item-body col text-center">
+    <a ng-href="{{TIL.url}}" target="_blank"><img class="ion-thumbnail" ng-src="{{TIL.thumbnail}}" err-src="img/ThinkingChimp.png"/></a>
+    <div class="text-center">
+    <span class="facts" ng-bind-html="TIL.title"></span>
+    </div>
+  </div>
+  <div class="item">
+    <a ng-click="getMemories()">
+    <img class="tilIcons" src="img/brain-2-32.png">
+  </a>
+    <a ng-click="remember(); getFacts()"><img class="tilIcons pullRight" src="img/plus-7-32.png" ></a>
+  </div>
+</div>
+</ion-content>
+

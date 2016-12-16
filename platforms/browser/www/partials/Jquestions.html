@@ -1,0 +1,20 @@
+
+<ion-content>
+  <div class="list card" style="border: 2px solid #66B9BF;" on-swipe-left="!Janswer ? !Janswer : Janswer = !Janswer; getJQ()">
+
+    <div class="item">
+      <img class="full-image" src="img/jeopartyDiscoOrange.png">
+    </div>
+
+    <div class="item item-body">
+        <h1 class="category" style="font-size: 40px;" ng-bind-html="Jquestions.category"></h1>
+        <h1 class="valQ" style="font-size: 30px;"  ng-bind-html="Jquestions.value"></h1>
+        <span class="question" ng-bind-html="Jquestions.question">
+        </span>
+        <br><br>
+         <button class="button button-block button-balanced" style="border: 2px solid #66B9BF; font-size: 32px; letter-spacing: 0.2em; text-shadow: 2px 2px #FF8E6E" ng-show="!Janswer" ng-click="Janswer = !Janswer">Answer</button>
+         <div class ="animate-show" ng-hide="!Janswer" ><span class="question"> Answer:  </span><span class="question" ng-bind-html="Jquestions.answer"></span class="question"></div>
+    </div>
+  </div>
+</ion-content>
+

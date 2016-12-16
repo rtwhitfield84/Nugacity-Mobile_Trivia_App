@@ -1,0 +1,49 @@
+<ion-content>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+          <ion-slide class="intro shadow">
+            <div class="box">
+              <h1 class="title big" style="letter-spacing: 5px;">Nugacity</h1>
+              <br><br>
+              <img class="bulb" src="img/light-bulb-brand-big.png">
+          </div><br><br><br><br><br>
+          </ion-slide>
+            <ion-slide class="intro shadow">
+            <div class="box">
+                <h1 class="title almostBig" style="letter-spacing: 5px;">Game Modes</h1>
+                <ol>
+                  <li>
+                     <h1 class="title"> Classic Trivia </h1>
+                      <ul>
+                        <li class="shadow">~Random multiple choice questions</li>
+                        <li class="shadow">~20 Seconds per question</li>
+                        <li class="shadow">~Each correct answer increases score</li>
+                        <li class="shadow">~Three "Noogs" per round</li>
+                      </ul>
+                  </li>
+                   <li>
+                  <h1 class="title"> JeoParty Mode </h1>
+                      <ul>
+                        <li class="shadow">~Classic Jeopardy Questions</li>
+                        <li class="shadow">~Party Atmosphere</li>
+                      </ul>
+                  </li>
+                  <li>
+                    <h1 class="title"> Today I learned </h1>
+                      <ul>
+                        <li class="shadow">~Random TIL facts from Reddit</li>
+                        <li class="shadow">~Save interesting facts to your Nooguts </li>
+                      </ul>
+                  </li>
+                </ol>
+            </div>
+          </ion-slide>
+          <ion-slide  class="intro shadow">
+                <div class="box"><h1 class="title" style="letter-spacing: 8px; font-size: 88px;">Play Now!</h1>
+                  <br>
+                  <span><a ng-click="play()"><img class="play" src="img/play-6-192.png"></a></span>
+                </div>
+          </ion-slide>
+    </ion-slide-box>
+</ion-content>
+
+

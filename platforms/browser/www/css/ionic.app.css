@@ -109,6 +109,11 @@ $dark:                            #444 !default;
   color: #FF8E6E;
   text-shadow: 1px 1px #07889B; }
 
+/*********************JEOPARTY STYLES***************************/
+.music {
+  -webkit-filter: drop-shadow(1px 12px 10px rgba(7, 136, 155, 0.7));
+  filter: drop-shadow(1px 12px 10px rgba(7, 136, 155, 0.7)); }
+
 /*********************TIL STYLES***************************/
 .pullRight {
   position: absolute;

@@ -12,6 +12,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
+    <icon src="resources/ios/icon/icon-small@3x.png" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />

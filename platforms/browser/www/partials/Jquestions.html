@@ -1,5 +1,10 @@
 
 <ion-content>
+<br>
+<div class="text-left">
+  <span style="margin-left: 15px;"><a ng-show="!mute" ng-click="mute = !mute; stop()"><img class="music" src="img/mute-2-32.png"></a></span>
+  <span><a ng-show="mute" ng-click="mute = !mute; play()"><img class="music" src="img/play-3-32.png"></a></span>
+</div>
   <div class="list card" style="border: 2px solid #66B9BF;" on-swipe-left="!Janswer ? !Janswer : Janswer = !Janswer; getJQ()">
 
     <div class="item">
@@ -7,13 +12,13 @@
     </div>
 
     <div class="item item-body">
-        <h1 class="category" style="font-size: 40px;" ng-bind-html="Jquestions.category"></h1>
-        <h1 class="valQ" style="font-size: 30px;"  ng-bind-html="Jquestions.value"></h1>
+        <h1 style="font-size: 35px;" ng-bind-html="Jquestions.category"></h1>
+        <h1 style="font-size: 25px;"  ng-bind-html="Jquestions.value"></h1>
         <span class="question" ng-bind-html="Jquestions.question">
         </span>
-        <br><br>
+        <br>
          <button class="button button-block button-balanced" style="border: 2px solid #66B9BF; font-size: 32px; letter-spacing: 0.2em; text-shadow: 2px 2px #FF8E6E" ng-show="!Janswer" ng-click="Janswer = !Janswer">Answer</button>
-         <div class ="animate-show" ng-hide="!Janswer" ><span class="question"> Answer:  </span><span class="question" ng-bind-html="Jquestions.answer"></span class="question"></div>
+         <div class ="animate-show" ng-hide="!Janswer" ><span class="question"> Answer:   </span><span class="question" ng-bind-html="Jquestions.answer"></span class="question"></div>
     </div>
   </div>
 </ion-content>

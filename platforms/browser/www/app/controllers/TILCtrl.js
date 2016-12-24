@@ -1,17 +1,17 @@
-// "use strict";
+"use strict";
 
-app.controller('TILCtrl', function($scope,TILStorage,UserFactory,AuthFactory,$location,$window,$sce,$sanitize,$filter,$cordovaToast){
+app.controller('TILCtrl', function($scope,TILStorage,UserFactory,AuthFactory,$location,$window,$sce,$sanitize,$filter,$cordovaToast,$ionicPlatform,$cordovaInAppBrowser){
 
-  $scope.toasty = () => {
-    $cordovaToast
-     .show('Swipe left for more facts. Add to your Nooguts by pressing the + button or view your saved Nooguts by pressing the noggin tenant button', '7000', 'top')
-     .then(function(success) {
-       // success
-     }, function (error) {
-       // error
-     });
-   };
-$scope.toasty();
+  // $scope.toasty = () => {
+  //   $cordovaToast
+  //    .show('Swipe left for more facts. Add to your Nooguts by pressing the + button or view your saved Nooguts by pressing the noggin tenant button', '7000', 'top')
+  //    .then(function(success) {
+  //      // success
+  //    }, function (error) {
+  //      // error
+  //    });
+  //  };
+// $scope.toasty();
 
 	  $scope.getFacts = () => {
 
@@ -50,6 +50,27 @@ $scope.getFacts();
 	  $scope.getMemories = () => {
 	  	$window.location.href = '#/memories';
 	  };
+
+    $ionicPlatform.ready(function() {
+
+       $scope.open = function($event) {
+        let url = $event.path[1].href;
+         $cordovaInAppBrowser.open('url', '_blank', 'location="yes"', 'closebuttoncaption="done"')
+           .then(function(event) {
+             // success
+           })
+           .catch(function(event) {
+             // error
+           });
+       };
+
+     });
+
+    // $scope.open = ($event) => {
+    //   console.log("event: ",$event.path[1].href);
+    //   let url = $event.path[1].href;
+    //   $cordovaInAppBrowser.open('url','_system');
+    // };
 
 
 });

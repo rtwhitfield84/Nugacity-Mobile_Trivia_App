@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 app.controller('TILCtrl', function($scope,TILStorage,UserFactory,AuthFactory,$location,$window,$sce,$sanitize,$filter,$cordovaToast){
 
@@ -50,6 +50,27 @@ $scope.getFacts();
 	  $scope.getMemories = () => {
 	  	$window.location.href = '#/memories';
 	  };
+
+    // $ionicPlatform.ready(function() {
+
+    //    $scope.open = function($event) {
+    //     let url = $event.path[1].href;
+    //      $cordovaInAppBrowser.open('url', '_blank', 'location="yes"', 'closebuttoncaption="done"')
+    //        .then(function(event) {
+    //          // success
+    //        })
+    //        .catch(function(event) {
+    //          // error
+    //        });
+    //    };
+
+    //  });
+
+    // $scope.open = ($event) => {
+    //   console.log("event: ",$event.path[1].href);
+    //   let url = $event.path[1].href;
+    //   $cordovaInAppBrowser.open('url','_system');
+    // };
 
 
 });

@@ -6,34 +6,25 @@
     <title>Nugacity</title>
 
     <link rel="manifest" href="manifest.json">
-    <!-- <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script> -->
 
     <!-- compiled css output -->
-
     <link href="css/ionic.app.css" rel="stylesheet">
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/www/lib/ngCordova/dist/ng-cordova.js"></script>
-    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
-
   </head>
+
   <body ng-app="nugacity" ng-controller="MainCtrl" class="platform-ios platform-cordova platform-webview">
   <div ng-include="'templates/header.html'"></div>
-<!-- <div class="bar bar-header bar-balanced title">
-<button class="button" ng-click="home()"><img class="iconImg bulb" src="img/light-bulb-icon.png"></button>
-
-<h1 class="title titleHeader">Nugacity</h1>
-<button class="button" ng-click="logout()"><img class="iconImg bulb" src="img/logout-24.png"></button>
-</div> -->
 
     <ion-nav-view class="has-header"></ion-nav-view>
 
     <!-- app -->
     <script type="text/javascript" src="app/app.js"></script>
 
-    <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <!-- libraries -->
     <script type="text/javascript" src="lib/bower_components/angular-timer/dist/angular-timer.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>

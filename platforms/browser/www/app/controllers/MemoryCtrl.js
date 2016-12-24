@@ -2,7 +2,6 @@
 
 app.controller('MemoryCtrl', function($scope,TILStorage,QStorage,AStorage,UserFactory,AuthFactory,$location,$window,$sce,$sanitize,$timeout){
 
-	// $scope.memories = [];
 
 	$scope.getStoredMemories = () => {
 		UserFactory.getFBUser(AuthFactory.getUser())
@@ -28,4 +27,5 @@ app.controller('MemoryCtrl', function($scope,TILStorage,QStorage,AStorage,UserFa
 		$scope.getStoredMemories();
 		});
 	};
+
 });

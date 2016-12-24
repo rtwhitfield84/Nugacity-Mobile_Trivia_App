@@ -6,7 +6,7 @@
   </div>
 
   <div class="item item-body col text-center">
-    <a ng-href="{{TIL.url}}" target="_blank"><img class="ion-thumbnail" ng-src="{{TIL.thumbnail}}" err-src="img/ThinkingChimp.png"/></a>
+    <a ng-click="open($event)" ng-href="{{TIL.url}}" target="_blank"><img class="ion-thumbnail" ng-src="{{TIL.thumbnail}}" err-src="img/ThinkingChimp.png"/></a>
     <div class="text-center">
     <span class="facts" ng-bind-html="TIL.title"></span>
     </div>

@@ -38,7 +38,6 @@ $ionicConfigProvider.views.maxCache(0);
     url: '/Tquestions',
     templateUrl: 'partials/Tquestions.html',
     controller: 'TQCtrl'
-    // resolve: {isAuth}
 
   })
   .state('jeoparty', {

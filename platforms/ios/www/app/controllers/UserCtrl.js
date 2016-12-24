@@ -22,6 +22,8 @@ app.controller('UserCtrl', function($scope, AuthFactory, UserFactory,$window,$co
      }, function (error) {
        // error
      });
+  });
+
   })
   .catch(function onRejected(error) {
       $cordovaToast
@@ -32,8 +34,6 @@ app.controller('UserCtrl', function($scope, AuthFactory, UserFactory,$window,$co
       // error
       });
    });
-
-	});
 	};
 
 	$scope.login = () => {

@@ -28,7 +28,6 @@ $scope.getFactoryTQ = () => {
 		QStorage.getTQuestions()
 		.then((question) => {
       let correctAnswer = question.answer;
-      console.log("correctAnswer", correctAnswer);
       $scope.correctAnswerId = correctAnswer;
       $scope.Tquestions = question.question;
       $scope.randomize = question.choices;
@@ -45,10 +44,10 @@ $scope.getFactoryTQ();
 $scope.shuffle = (answers) => {
 	let currentIndex = answers.length, temporaryValue, randomIndex;
 
-	// While there remain answers to shuffle...
+	// While there remain answers to shuffle
 		while (0 !== currentIndex) {
 
-		// Pick a remaining answer...
+		// Pick a remaining answer
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex -= 1;
 
@@ -80,7 +79,6 @@ $scope.$on('timer-tick', function (event, args) {
 
 
 	//timer methods
-
 	$scope.startTimer = function (){
 		$scope.$broadcast('timer-start');
 		$scope.timerRunning = true;
@@ -161,10 +159,9 @@ $scope.$on('timer-tick', function (event, args) {
           allUsers.push(userCollection[key]);
         });
           UserFactory.users = allUsers;
-          console.log("all", allUsers);
           $window.location.href = '#/gameOver';
           AStorage.wrong = ["img/light-bulb-icon.png","img/light-bulb-icon.png","img/light-bulb-icon.png"];
-            AStorage.score = 0;
+          AStorage.score = 0;
         });
 
       });

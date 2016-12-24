@@ -90,7 +90,8 @@ $dark:                            #444 !default;
 .question {
   font-size: 20px;
   font-weight: 600;
-  text-shadow: 1px 1px #F1F1EF; }
+  text-shadow: 1px 1px #F1F1EF;
+  line-height: 3px; }
 
 .btnText {
   font-size: 18px;

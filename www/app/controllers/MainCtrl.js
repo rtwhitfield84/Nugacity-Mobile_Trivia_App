@@ -1,11 +1,11 @@
 "use strict";
 
-app.controller('MainCtrl', function($scope,QStorage,$location,$window,AuthFactory,UserFactory,$cordovaToast){
+app.controller('MainCtrl', function($scope,$location,$window,AuthFactory,UserFactory,$cordovaToast){
 
-  UserFactory.getUsers()
-  .then((userObj) => {
-    console.log("userObj main", userObj);
-  });
+  // UserFactory.getUsers()
+  // .then((userObj) => {
+  //   console.log("userObj main", userObj);
+  // });
 
 	$scope.logout = () => {
 		console.log("logout");

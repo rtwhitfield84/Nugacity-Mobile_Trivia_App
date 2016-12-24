@@ -2,6 +2,8 @@
 
 var app = angular.module('nugacity', ['timer', 'ngSanitize','ionic','ngCordova',]);
 
+//check if user is logged in
+
 let isAuth = (AuthFactory,$window) => new Promise((resolve,reject)=> {
 	AuthFactory.isAuthenticated()
 	.then((userExists) => {
@@ -10,7 +12,6 @@ let isAuth = (AuthFactory,$window) => new Promise((resolve,reject)=> {
 			resolve();
 		} else {
 			$window.location.href = '#/';
-			// reject();
 		}
 	});
 });
@@ -19,6 +20,7 @@ let isAuth = (AuthFactory,$window) => new Promise((resolve,reject)=> {
 
 app.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider) {
 
+//prevent ionic cacheing
 $ionicConfigProvider.views.maxCache(0);
 
 
@@ -38,7 +40,6 @@ $ionicConfigProvider.views.maxCache(0);
     url: '/Tquestions',
     templateUrl: 'partials/Tquestions.html',
     controller: 'TQCtrl'
-
   })
   .state('jeoparty', {
     url: '/Jquestions',
@@ -59,7 +60,6 @@ $ionicConfigProvider.views.maxCache(0);
     url: '/TIL',
     templateUrl: 'partials/TIL.html',
     controller: 'TILCtrl'
-    // resolve: {isAuth}
   })
   .state('memories', {
     url: '/memories',
@@ -69,7 +69,7 @@ $ionicConfigProvider.views.maxCache(0);
 $urlRouterProvider.otherwise('/');
 });
 
-
+//date filter
 app.filter('unsafe', function($sce) {
     return function(val) {
         return $sce.trustAsHtml(val);
@@ -77,7 +77,7 @@ app.filter('unsafe', function($sce) {
 });
 
 
-
+//firebase initialization
 app.run(($location, UFBCreds) => {
 	let creds = UFBCreds;
 	let authConfig = {
@@ -88,6 +88,7 @@ app.run(($location, UFBCreds) => {
 	firebase.initializeApp(authConfig);
 	});
 
+//custom directive for no image result in til view
 
 app.directive('errSrc', function() {
   return {

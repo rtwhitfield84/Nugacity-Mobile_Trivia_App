@@ -2,29 +2,29 @@
 
 app.controller('MemoryCtrl', function($scope,TILStorage,QStorage,AStorage,UserFactory,AuthFactory,$location,$window,$sce,$sanitize,$timeout){
 
-
+//get user saved facts
 	$scope.getStoredMemories = () => {
-		UserFactory.getFBUser(AuthFactory.getUser())
-		.then((user) => {
-			console.log("user", user);
-		TILStorage.getFBMemories(user[0].uid)
-		.then((memories) => {
-			console.log("memories", memories);
-			$scope.memories = memories;
-			console.log("$scope.memories", $scope.memories);
-			$scope.$apply();
-		});
-	});
+
+  		UserFactory.getFBUser(AuthFactory.getUser())
+  		.then((user) => {
+  		TILStorage.getFBMemories(user[0].uid)
+  		.then((memories) => {
+  			$scope.memories = memories;
+  			$scope.$apply();
+  		});
+  	});
 	};
+
 	$scope.getStoredMemories();
 
+//delete user saved fact
 	$scope.forget = ($event) =>{
-    console.log("$event",$event);
+
     let id = $event.target.id;
-    console.log("id", id);
-		TILStorage.forgetFromFB(id)
-		.then((obj) => {
-		$scope.getStoredMemories();
+
+		  TILStorage.forgetFromFB(id)
+		  .then((obj) => {
+		  $scope.getStoredMemories();
 		});
 	};
 

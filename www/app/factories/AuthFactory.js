@@ -8,7 +8,6 @@ app.factory('AuthFactory',function(){
 
 		return firebase.auth().createUserWithEmailAndPassword(userObj.email,userObj.password)
     .catch((error) => {
-      console.log("reg error af", error);
       throw error;
     });
 	};
@@ -17,7 +16,6 @@ app.factory('AuthFactory',function(){
 
 		return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password)
     .catch((error) => {
-      console.log("error auth fact login", error);
       throw error;
     });
 
@@ -35,7 +33,6 @@ app.factory('AuthFactory',function(){
 		firebase.auth().onAuthStateChanged((user) => {
 			if (user) {
 				currentUser = user.uid;
-				// console.log("currentUser", currentUser);
 				resolve(true);
 			} else {
 				resolve(false);

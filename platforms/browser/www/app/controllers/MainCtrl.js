@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('MainCtrl', function($scope,QStorage,$location,$window,AuthFactory,UserFactory){
+app.controller('MainCtrl', function($scope,QStorage,$location,$window,AuthFactory,UserFactory,$cordovaToast){
 
   UserFactory.getUsers()
   .then((userObj) => {
@@ -22,7 +22,14 @@ app.controller('MainCtrl', function($scope,QStorage,$location,$window,AuthFactor
   };
 
   $scope.til = () => {
+    $cordovaToast
+     .show('Swipe left for more facts. Add to your Nooguts by pressing the + button or view your saved Nooguts by pressing the noggin tenant button', '7000', 'top')
+     .then(function(success) {
+       // success
     $window.location.href  = "#/TIL";
+     }, function (error) {
+       // error
+     });
   };
 
     $scope.home = () => {

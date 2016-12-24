@@ -1,20 +1,20 @@
 <ion-scroll direction="y">
-<div class="text-center">
-<br>
- <a ng-href ="#/TIL"><img class="tilIcons" src="img/arrow-63-64.png"></a>
- </div>
-<div ng-repeat="memory in memories">
-<div class="list card" style="border: 2px solid #66B9BF;">
-        <div class="item item-body">
-        <div class=" col text-right">
-          <a ng-click="forget($event)"><img id="{{memory.id}}" class="tilIcons" src="img/x-mark-3-32.png"></a>
-          </div>
-          <div class ="col text-center"><a ng-href="{{memory.url}}" target="_blank"><img ng-src="{{memory.thumbnail}}" err-src="http://www.modernchurch.org.uk/images/blog/ThinkingChimp.jpg"/></a></div>
-          <div class ="text-left"><span class="facts">{{memory.title}}</span></div>
-          <br>
-          <div class ="text-left"><span class="facts">{{memory.saved}}</span></div>
+    <div class="text-center">
+    <br>
+      <a ng-href ="#/TIL"><img class="tilIcons" src="img/arrow-63-64.png"></a>
+    </div>
+    <div ng-repeat="memory in memories">
+      <div class="list card" style="border: 2px solid #66B9BF;">
+      <div class="item item-body">
+      <div class=" col text-right">
+         <a ng-click="forget($event)"><img id="{{memory.id}}" class="tilIcons" src="img/x-mark-3-32.png"></a>
       </div>
+    <div class ="col text-center"><a><img ng-src="{{memory.thumbnail}}" err-src="http://www.modernchurch.org.uk/images/blog/ThinkingChimp.jpg"/></a></div>
+        <div class ="text-left"><span class="facts">{{memory.title}}</span></div>
+        <br>
+        <div class ="text-left"><span class="facts">{{memory.saved}}</span></div>
+        </div>
       </div>
-      </div>
+    </div>
 </ion-scroll>
 

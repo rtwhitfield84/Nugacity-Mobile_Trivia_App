@@ -1,4 +1,5 @@
- <ion-content>
+ <!-- <ion-content> -->
+<ion-scroll direction="y">
 <div class="list card" on-swipe-left="getFacts()" style="border: 2px solid #66B9BF;">
 
   <div class="item item-avatar">
@@ -6,7 +7,7 @@
   </div>
 
   <div class="item item-body col text-center">
-    <a ng-href="{{TIL.url}}" target="_blank"><img class="ion-thumbnail" ng-src="{{TIL.thumbnail}}" err-src="img/ThinkingChimp.png"/></a>
+    <a><img class="ion-thumbnail" ng-src="{{TIL.thumbnail}}" err-src="img/ThinkingChimp.png"/></a>
     <div class="text-center">
     <span class="facts" ng-bind-html="TIL.title"></span>
     </div>
@@ -18,5 +19,7 @@
     <a ng-click="remember(); getFacts()"><img class="tilIcons pullRight" src="img/plus-7-32.png" ></a>
   </div>
 </div>
-</ion-content>
+</ion-scroll>
+<!-- </ion-content> -->
 
+<!-- ng-click="open($event)" ng-href="{{TIL.url}}" target="_blank" -->

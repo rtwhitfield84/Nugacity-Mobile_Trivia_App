@@ -15,10 +15,6 @@ Trivia mode provides users with random questions from a database of over 40,000.
 * **Richard Whitfield** - [rwhitfield84](https://github.com/rwhitfield84)
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * Trivia questions parsed from - [uberspot](https://github.com/uberspot/OpenTriviaQA)

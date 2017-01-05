@@ -11,6 +11,16 @@ Clone this repo and install [Ionic](http://ionicframework.com/)
 npm install -g cordova ionic
 ```
 
+Install all dependencies
+
+```
+cd nugacity/www/lib
+
+npm install
+
+bower install
+```
+
 Download [Xcode](https://developer.apple.com/xcode/)
 * Follow instructions to create developer account(should be free in versions 7+)
 
@@ -45,5 +55,12 @@ Connect your mobile device and run build in Xcode
 
 * Trivia questions parsed from - [uberspot](https://github.com/uberspot/OpenTriviaQA)
 * Jeopardy json questions from - [Reddit](https://www.reddit.com/r/datasets/comments/1uyd0t/200000_jeopardy_questions_in_a_json_file/)
+
+
+
+
+
+
+
 
 

@@ -24,7 +24,7 @@ bower install
 Download [Xcode](https://developer.apple.com/xcode/)
 * Follow instructions to create developer account(should be free in versions 7+)
 
-Contact [rwhitfield84](https://github.com/rwhitfield84) to gain access to API keys
+Contact [rtwhitfield84](https://github.com/rtwhitfield84) to gain access to API keys
 * Create values directory and update with API keys
 
 Build for IOS
@@ -48,7 +48,7 @@ Connect your mobile device and run build in Xcode
 
 ## Author
 
-* **Richard Whitfield** - [rwhitfield84](https://github.com/rwhitfield84)
+* **Richard Whitfield** - [rtwhitfield84](https://github.com/rtwhitfield84)
 
 
 ## Acknowledgments
